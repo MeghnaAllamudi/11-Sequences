@@ -9,7 +9,7 @@ It also demonstrates using an ORACLE and/or PROBABILITY THEORY
 in testing and BOUNDARY (EDGE) TESTING.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Meghna Allamudi.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import random
@@ -202,6 +202,10 @@ def sum_sequence(sequence):
     Type hints:
       :type sequence: list or tuple (of integers)
     """
+    total = 0
+    for k in range(0,len(sequence)):
+        total = total + sequence[k]
+    return total
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
@@ -377,6 +381,13 @@ def count_items_bigger_than(numbers, threshold):
       :type numbers:   list or tuple (of numbers)
       :type threshold: float
     """
+    count = 0
+    for k in range(0,len(numbers)):
+        if numbers[k] > threshold:
+            count = count + 1
+        else:
+            count = count
+    return count
     # ------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -507,6 +518,13 @@ def count_positive_sines(numbers):
     Type hints:
       :type sequence: list or tuple (of numbers)
     """
+    count = 0
+    for k in range(0,len(numbers)):
+        if math.sin(numbers[k]) > 0:
+            count = count + 1
+        else:
+            count = count
+    return count
     # ------------------------------------------------------------------
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -609,6 +627,10 @@ def sum_first_n(numbers, n):
       :type numbers:   list of tuple (of numbers)
       :type n: int
     """
+    total = 0
+    for k in range(n):
+        total = total + numbers[k]
+    return total
     # ------------------------------------------------------------------
     # TODO: 9. Implement and test this function.
     #          Tests have been written for you (above).
